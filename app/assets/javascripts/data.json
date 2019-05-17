@@ -1,0 +1,301 @@
+{
+	"name": "fashion",
+	"children": [{
+			"name": "Men's fashion",
+			"children": [{
+					"name": "#falloutfits",
+					"children": [{
+							"name": "streetwear",
+							"value": 31400
+						},
+						{
+							"name": "businesscasual",
+							"value": 866
+						},
+						{
+							"name": "datenightoutfit",
+							"value": 155
+						},
+						{
+							"name": "classyoutfits",
+							"value": 130
+						},
+						{
+							"name": "sportswear",
+							"value": 3000
+						}
+					]
+				},
+				{
+					"name": "#springfashion",
+					"children": [{
+							"name": "urbanstyle",
+							"value": 3900
+						},
+						{
+							"name": "streetwear",
+							"value": 31400
+						},
+						{
+							"name": "businesscasual",
+							"value": 866
+						},
+						{
+							"name": "datenightoutfit",
+							"value": 155
+						},
+						{
+							"name": "classyoutfits",
+							"value": 130
+						},
+						{
+							"name": "workwear",
+							"value": 1300
+						}
+					]
+				},
+				{
+					"name": "#summerfashion",
+					"children": [{
+							"name": "resortwear",
+							"value": 817
+						},
+						{
+							"name": "streetwear",
+							"value": 31400
+						},
+						{
+							"name": "businesscasual",
+							"value": 866
+						},
+						{
+							"name": "datenightoutfit",
+							"value": 155
+						},
+						{
+							"name": "classyoutfits",
+							"value": 130
+						},
+						{
+							"name": "sportswear",
+							"value": 3000
+						}
+					]
+				},
+				{
+					"name": "#winterstyle",
+					"children": [{
+							"name": "lougewear",
+							"value": 40000
+						},
+						{
+							"name": "streetwear",
+							"value": 31400
+						},
+						{
+							"name": "businesscasual",
+							"value": 866
+						},
+						{
+							"name": "datenightoutfit",
+							"value": 155
+						},
+						{
+							"name": "classyoutfits",
+							"value": 130
+						},
+						{
+							"name": "sportswear",
+							"value": 3000
+						}
+					]
+				}
+			]
+
+		},
+		{
+			"name": "Women's fashion",
+			"children": [{
+					"name": "#falloutfits",
+					"children": [{
+							"name": "momstyle",
+							"value": 18000
+						},
+						{
+							"name": "streetwear",
+							"value": 31400
+						},
+						{
+							"name": "businesscasual",
+							"value": 866
+						},
+						{
+							"name": "datenightoutfit",
+							"value": 155
+						},
+						{
+							"name": "classyoutfits",
+							"value": 130
+						},
+						{
+							"name": "sportswear",
+							"value": 3000
+						}
+					]
+				},
+				{
+					"name": "#springfashion",
+					"children": [{
+							"name": "efortlesschic",
+							"value": 176
+						},
+						{
+							"name": "streetwear",
+							"value": 31400
+						},
+						{
+							"name": "businesscasual",
+							"value": 866
+						},
+						{
+							"name": "datenightoutfit",
+							"value": 155
+						},
+						{
+							"name": "classyoutfits",
+							"value": 130
+						},
+						{
+							"name": "sportswear",
+							"value": 3000
+						}
+					]
+				},
+				{
+					"name": "#summerfashion",
+					"children": [{
+							"name": "airportfashion",
+							"value": 285
+						},
+						{
+							"name": "streetwear",
+							"value": 31400
+						},
+						{
+							"name": "businesscasual",
+							"value": 866
+						},
+						{
+							"name": "datenightoutfit",
+							"value": 155
+						},
+						{
+							"name": "classyoutfits",
+							"value": 130
+						},
+						{
+							"name": "sportswear",
+							"value": 3000
+						}
+					]
+				},
+				{
+					"name": "#winterstyle",
+					"children": [{
+							"name": "fashionismyprofession",
+							"value": 164
+						},
+						{
+							"name": "streetwear",
+							"value": 31400
+						},
+						{
+							"name": "businesscasual",
+							"value": 866
+						},
+						{
+							"name": "datenightoutfit",
+							"value": 155
+						},
+						{
+							"name": "classyoutfits",
+							"value": 130
+						},
+						{
+							"name": "sportswear",
+							"value": 3000
+						}
+					]
+				}
+			]
+		},
+		{
+			"children": "#ootd",
+			"value": 255000
+		},
+		{
+			"children": "#swag",
+			"value": 15100
+		},
+		{
+			"children": "#wiw",
+			"value": 12100
+		},
+		{
+			"children": "#instastyle",
+			"value": 31
+		},
+		{
+			"children": "#outdoorwear",
+			"value": 50
+		},
+		{
+			"children": "#sportswear",
+			"value": 2900
+		},
+		{
+			"children": "#athleisure",
+			"value": 1000
+		},
+		{
+			"children": "#casualstyle",
+			"value": 5900
+		},
+		{
+			"children": "#businesscasual",
+			"value": 866
+		},
+		{
+			"children": "#datenightoutfit",
+			"value": 155
+		},
+		{
+			"children": "#classicwear",
+			"value": 31
+		},
+		{
+			"children": "#luxurystyle",
+			"value": 2700
+		},
+		{
+			"children": "#comfy",
+			"value": 6500
+		},
+		{
+			"children": "#cruiseoutfits",
+			"value": 4
+		},
+		{
+			"children": "#vintageclothing",
+			"value": 500
+		},
+		{
+			"children": "#hypebeast",
+			"value": 20000
+		},
+		{
+			"children": "#activewear",
+			"value": 3000
+		}
+	]
+}
