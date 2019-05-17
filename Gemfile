@@ -70,3 +70,4 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'ransack'
 gem 'webpacker', '~> 4.x'
+gem "d3-rails"
