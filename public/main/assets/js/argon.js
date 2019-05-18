@@ -1046,14 +1046,8 @@ var SalesChart = (function() {
 					data: [9, 14, 19, 20, 25, 40, 48, 60, 73]
 				},{
 					label: 'Nosomnia',
-					backgroundColor: "rgb(248,100,71)",
 					fill: true,
 					data: [5, 10, 5, 15, 10, 17, 14, 12, 4]
-				}],{
-					label: 'UniversalWorks',
-					backgroundColor: "rgb(26,188,156)",
-					fill: true,
-					data: [3, 8, 20, 15, 10, 12, 14, 11, 9]
 				}]
 			}
 		});
