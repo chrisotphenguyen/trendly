@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Great bubbles">
+  <meta name="author" content="Creative Tim">
+  <title>TRENDLY</title>
+  <!-- Favicon -->
+  <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- Argon CSS -->
+  <link type="text/css" href="../assets/css/argon.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body class="bg-default">
+  <style>
+
+  .node {
+    cursor: pointer;
+  }
+
+  .node:hover {
+    stroke: #000;
+    stroke-width: 1.5px;
+  }
+
+  .node--leaf {
+    fill: white;
+  }
+
+  .label {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-anchor: middle;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+  }
+
+  .label,
+  .node--root,
+  .node--leaf {
+    pointer-events: none;
+  }
+
+  </style>
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
+      <div class="container px-4">
+        <a class="h1 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./register.html">TRENDLY </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-collapse-main">
+          <!-- Collapse header -->
+          <div class="navbar-collapse-header d-md-none">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="../index.html">
+                  <img src="../assets/img/brand/blue.png">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Navbar items -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="../index.html">
+                <i class="ni ni-planet"></i>
+                <span class="nav-link-inner--text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="../src/register.html">
+                <i class="ni ni-circle-08"></i>
+                <span class="nav-link-inner--text">Register</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="../src/login.html">
+                <i class="ni ni-key-25"></i>
+                <span class="nav-link-inner--text">Login</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="../src/profile.html">
+                <i class="ni ni-single-02"></i>
+                <span class="nav-link-inner--text">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-gradient-primary py-7 py-lg-8" >
+      <div class="container">
+        <div class="header-body text-center mb-7">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-10">
+              <h1 class="text-white">Welcome!</h1>
+              <p class="text-lead text-light">We use AI and Datascience to discover new customer segments help you decide which emerging brands to buy for next season.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+      <iframe src="/main/src/bubbles.html" width="980" height="980" scrolling="no"></iframe>
+      </div>
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+    <!-- Page content -->
+
+      <!-- Bubbles -->
+
+
+  </div>
+
+  <!-- Footer -->
+
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Argon JS -->
+  <script src="../assets/js/argon.js?v=1.0.0"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+
+  var svg = d3.select("svg"),
+      margin = 20,
+      diameter = +svg.attr("width"),
+      g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+  var color = d3.scaleLinear()
+      .domain([-1, 5])
+      .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+      .interpolate(d3.interpolateHcl);
+
+  var pack = d3.pack()
+      .size([diameter - margin, diameter - margin])
+      .padding(2);
+
+  d3.json("main-data.json", function(error, root) {
+    if (error) throw error;
+
+    root = d3.hierarchy(root)
+        .sum(function(d) { return d.size; })
+        .sort(function(a, b) { return b.value - a.value; });
+
+    var focus = root,
+        nodes = pack(root).descendants(),
+        view;
+
+    var circle1 = g.selectAll("circle1")
+      .data(nodes)
+      .enter().append("circle1")
+        .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+        .style("fill", function(d) { return d.children ? color(d.depth) : null; })
+        .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+
+    var text = g.selectAll("text")
+      .data(nodes)
+      .enter().append("text")
+        .attr("class", "label")
+        .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+        .style("display", function(d) { return d.parent === root ? "inline" : "none"; })
+        .text(function(d) { return d.data.name; });
+
+    var node = g.selectAll("circle1,text");
+
+    svg
+        .style("background", color(-1))
+        .on("click", function() { window.location.href ="/main/src/tables.html" });
+
+    zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+    function zoom(d) {
+      var focus0 = focus; focus = d;
+
+      var transition = d3.transition()
+          .duration(d3.event.altKey ? 7500 : 750)
+          .tween("zoom", function(d) {
+            var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+            return function(t) { zoomTo(i(t)); };
+          });
+
+      transition.selectAll("text")
+        .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+          .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+          .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+          .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+    }
+
+    function zoomTo(v) {
+      var k = diameter / v[2]; view = v;
+      node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+      circle1.attr("r", function(d) { return d.r * k; });
+    }
+  });
+
+  </script>
+
+</body>
+
+</html>

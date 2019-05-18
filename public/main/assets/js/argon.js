@@ -955,7 +955,7 @@ var OrdersChart = (function() {
 							}
 
 							content += '<span class="popover-body-value">' + yLabel + '</span>';
-							
+
 							return content;
 						}
 					}
@@ -1042,7 +1042,12 @@ var SalesChart = (function() {
 				labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 				datasets: [{
 					label: 'Performance',
+					fill: true,
 					data: [0, 20, 10, 30, 15, 40, 20, 60, 60]
+				},{
+					label: 'Performance2',
+					fill: true,
+					data: [0, 10, 5, 15, 30, 20, 25, 30, 60]
 				}]
 			}
 		});
