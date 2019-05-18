@@ -962,10 +962,10 @@ var OrdersChart = (function() {
 				}
 			},
 			data: {
-				labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				labels: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
 				datasets: [{
-					label: 'Sales',
-					data: [25, 20, 30, 22, 17, 29]
+					label: 'Followers',
+					data: [12, 14, 17, 20, 21, 23]
 				}]
 			}
 		});
@@ -1041,13 +1041,13 @@ var SalesChart = (function() {
 			data: {
 				labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 				datasets: [{
-					label: 'Performance',
+					label: 'Palmer//Harding',
 					fill: true,
-					data: [0, 20, 10, 30, 15, 40, 20, 60, 60]
+					data: [0, 14, 19, 20, 25, 40, 48, 60, 73]
 				},{
-					label: 'Performance2',
+					label: 'Nosomnia',
 					fill: true,
-					data: [0, 10, 5, 15, 30, 20, 25, 30, 60]
+					data: [0, 10, 5, 15, 10, 17, 14, 12, 4]
 				}]
 			}
 		});
