@@ -965,7 +965,7 @@ var OrdersChart = (function() {
 				labels: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
 				datasets: [{
 					label: 'Followers',
-					data: [12, 14, 17, 20, 21, 23]
+					data: [24000, 28000, 34000, 40000, 430000, 46000]
 				}]
 			}
 		});
